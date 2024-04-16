@@ -116,3 +116,4 @@ resource "aws_api_gateway_stage" "api" {
   # 도메인/api 의 요청은 API 게이트웨이가 처리
   stage_name    = "api"
 }
+
