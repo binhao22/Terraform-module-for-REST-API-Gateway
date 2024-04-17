@@ -103,7 +103,7 @@ resource "aws_api_gateway_deployment" "dep" {
     ]))
   }
 
-  # 리소스 재생성 전 우선 삭제
+  
   lifecycle {
     create_before_destroy = true
   }
