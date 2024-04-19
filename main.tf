@@ -103,7 +103,7 @@ resource "aws_api_gateway_deployment" "dep" {
     ]))
   }
 
-  
+  #
   lifecycle {
     create_before_destroy = true
   }
