@@ -34,7 +34,7 @@ resource "aws_api_gateway_vpc_link" "dga-vpclink" {
   }
 }
 
-# CORS 설정
+# CORS 허용 설정
 module "community_cors" {
   source  = "squidfunk/api-gateway-enable-cors/aws"
   version = "0.3.3"
@@ -103,7 +103,7 @@ resource "aws_api_gateway_deployment" "dep" {
     ]))
   }
 
-  #
+  
   lifecycle {
     create_before_destroy = true
   }
