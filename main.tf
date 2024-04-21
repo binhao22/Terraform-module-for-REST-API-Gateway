@@ -24,13 +24,13 @@ resource "aws_api_gateway_authorizer" "authorizer" {
 
 # VPC Link 생성
 resource "aws_api_gateway_vpc_link" "dga-vpclink" {
-  name        = "dga-vpclink"
-  description = "dga-vpclink"
+  name        = "vpclink"
+  description = "vpclink"
   # VPC Link + NLB 통합
   target_arns = [var.dga-nlb-id]
 
   tags = {
-    name = "dga-vpclink"
+    name = "vpclink"
   }
 }
 
