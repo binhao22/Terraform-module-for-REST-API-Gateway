@@ -1,6 +1,6 @@
 # REST API 게이트웨이 생성
 resource "aws_api_gateway_rest_api" "dga-apigw" {
-  name = "dga-apigw"
+  name = "apigw"
   endpoint_configuration {
     # 동일 리전 서비스에 적합
     types = ["REGIONAL"]
@@ -8,7 +8,7 @@ resource "aws_api_gateway_rest_api" "dga-apigw" {
   # 모든 파일을 허용
   binary_media_types = ["*/*"]
   tags = {
-    name = "dga-apigw"
+    name = "apigw"
   }
 }
 
