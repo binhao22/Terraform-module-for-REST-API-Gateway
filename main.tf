@@ -13,7 +13,7 @@ resource "aws_api_gateway_rest_api" "dga-apigw" {
 }
 
 # 권한부여자 생성
-resource "aws_api_gateway_authorizer" "authorizer" {
+resource "aws_api_gateway_authorizer" "this" {
   name                   = "authorizer"
   type                   = "COGNITO_USER_POOLS"
   # 위에 생성한 REST API 와 연동
@@ -60,7 +60,7 @@ resource "aws_api_gateway_resource" "proxy" {
 resource "aws_api_gateway_method" "any" {
   # 코그니토 인증을 거치도록 설정
   authorization = "COGNITO_USER_POOLS"
-  authorizer_id = aws_api_gateway_authorizer.authorizer.id
+  authorizer_id = aws_api_gateway_authorizer.this.id
   # 모든 HTTP 요청을 허용
   http_method   = "ANY"
   resource_id   = aws_api_gateway_resource.proxy.id
