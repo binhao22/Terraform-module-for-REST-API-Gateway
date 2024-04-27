@@ -1,5 +1,5 @@
 # REST API 게이트웨이 생성
-resource "aws_api_gateway_rest_api" "dga-apigw" {
+resource "aws_api_gateway_rest_api" "apigw" {
   name = "apigw"
   endpoint_configuration {
     # 동일 리전 서비스에 적합
