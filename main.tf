@@ -17,7 +17,7 @@ resource "aws_api_gateway_authorizer" "this" {
   name                   = "authorizer"
   type                   = "COGNITO_USER_POOLS"
   # 위에 생성한 REST API 와 연동
-  rest_api_id            = aws_api_gateway_rest_api.dga-apigw.id
+  rest_api_id            = aws_api_gateway_rest_api.apigw.id
   # 코그니토를 권한부여자로 지정
   provider_arns          = [var.cognito-arn]
 }
