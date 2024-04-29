@@ -23,7 +23,7 @@ resource "aws_api_gateway_authorizer" "this" {
 }
 
 # VPC Link 생성
-resource "aws_api_gateway_vpc_link" "dga-vpclink" {
+resource "aws_api_gateway_vpc_link" "vpclink" {
   name        = "vpclink"
   description = "vpclink"
   # VPC Link + NLB 통합
